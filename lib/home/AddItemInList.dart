@@ -28,7 +28,13 @@ class _AddItemInListState extends State<AddItemInList> {
   Widget build(BuildContext context) {
     return AlertDialog(
       contentPadding: EdgeInsets.all(0.0),
-      content: SingleChildScrollView(child: addcard()),
+      content: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [Colors.lightGreenAccent, Colors.white])),
+          child: SingleChildScrollView(child: addcard())),
     );
   }
 
@@ -40,7 +46,7 @@ class _AddItemInListState extends State<AddItemInList> {
           alignment: AlignmentDirectional.center,
           width: double.infinity,
           height: 60,
-          color: Colors.green,
+          color: Colors.orange,
           child: labletxt(),
         ),
         Container(
@@ -56,7 +62,7 @@ class _AddItemInListState extends State<AddItemInList> {
         ),
         Container(
           width: double.maxFinite,
-          color: Colors.green,
+          color: Colors.orange,
           child: addbtn(),
         ),
       ],
@@ -68,7 +74,7 @@ class _AddItemInListState extends State<AddItemInList> {
       "Add Item",
       textAlign: TextAlign.center,
       overflow: TextOverflow.ellipsis,
-      style: TextStyle(fontSize: 30.0, color: Colors.white),
+      style: TextStyle(fontSize: 30.0, color: Colors.black),
     );
   }
 
@@ -135,7 +141,7 @@ class _AddItemInListState extends State<AddItemInList> {
   Widget addbtn() {
     return FlatButton(
         child: const Text('Add',
-            style: TextStyle(fontSize: 18.0, color: Colors.white)),
+            style: TextStyle(fontSize: 18.0, color: Colors.black)),
         onPressed: () {
           strUsername = username.text;
           strEmail = email.text;

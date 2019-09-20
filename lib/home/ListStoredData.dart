@@ -18,7 +18,7 @@ class DyanmicList extends State<ListStoredData> {
           actions: <Widget>[
             IconButton(
                 icon: Icon(Icons.add_circle),
-                color: Colors.white,
+                color: Colors.black,
                 tooltip: "test",
                 iconSize: 30.0,
                 onPressed: () {

@@ -44,10 +44,11 @@ class _SingleItemSelectionListState extends State<SingleItemSelectionList> {
         title: Text('Selected ListView'),
       ),
       body: ListView.builder(
+
         itemCount: _listViewData.length,
         itemBuilder: (context, index) => Container(
           color: _selectedIndex != null && _selectedIndex == index
-              ? Colors.grey
+              ? Colors.orange
               : Colors.white,
 
           child: ListTile(
@@ -57,16 +58,16 @@ class _SingleItemSelectionListState extends State<SingleItemSelectionList> {
                     border: new Border(
                         right: new BorderSide(width: 1.0, color: Colors.white24))),
                 child: Icon(Icons.favorite, color: _selectedIndex != null && _selectedIndex == index
-                    ? Colors.red
-                    : Colors.black),
+                    ? Colors.black
+                    : Colors.grey),
               ),
 
 
             title: Text(_listViewData[index], style: new TextStyle(fontSize: _selectedIndex != null && _selectedIndex == index
                 ? 20.0
                 : 14.0, color: _selectedIndex != null && _selectedIndex == index
-                ? Colors.white
-                : Colors.black)),
+                ? Colors.black
+                : Colors.grey)),
             onTap: () => _onSelected(index),
           ),
         ),

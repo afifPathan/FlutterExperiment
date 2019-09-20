@@ -52,8 +52,8 @@ class _MultiItemSelectionListState extends State<MultiItemSelectionList> {
             leading: Container(
               padding: EdgeInsets.only(right: 12.0),
               decoration: new BoxDecoration(
-                 /* border: new Border(
-                      right: new BorderSide(width: 1.0, color: Colors.black))*/),
+                  border: new Border(
+                      right: new BorderSide(width: 1.0, color: Colors.black))),
               child: favoriteIcon(index),
             ),
 
@@ -76,7 +76,7 @@ class _MultiItemSelectionListState extends State<MultiItemSelectionList> {
 
   Widget favoriteText(int index, String text){
     if(favoriteItems.contains(index)){
-      return Text(text, style: new TextStyle(fontSize:20.0, color: Colors.black, fontWeight: FontWeight.bold));
+      return Text(text, style: new TextStyle(fontSize:20.0, color: Colors.white, fontWeight: FontWeight.bold));
     }else{
       return Text(text, style: new TextStyle(fontSize:14.0, color: Colors.black));
     }
@@ -93,7 +93,7 @@ class _MultiItemSelectionListState extends State<MultiItemSelectionList> {
 
   favouriteColor(int index) {
     if(favoriteItems.contains(index)){
-      backgroundColor = Colors.grey;
+      backgroundColor = Colors.black;
       return backgroundColor;
     }else{
       backgroundColor = Colors.white;
